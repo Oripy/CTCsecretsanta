@@ -34,7 +34,6 @@
                     }
                 }
                 list_merge = Array.from(to_merge).sort((a, b) => b > a);
-                console.log(list_merge);
                 list_merge.forEach((merged_index) => {
                     merged = true;
                     groups[index] = Array.from(new Set(groups[index].concat(groups[merged_index])));
@@ -45,7 +44,6 @@
                 }
             }
         }
-        console.log(groups);
         let group_num = 2;
         for (group of groups) {
             for (santee of data.nodes) {
@@ -55,7 +53,6 @@
             }
             group_num++;
         }
-        console.log(groups);
         const links = data.links.map(d => ({...d}));
         const nodes = data.nodes.map(d => ({...d}));
 
